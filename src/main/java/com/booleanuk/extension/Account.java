@@ -9,11 +9,10 @@ public abstract class Account {
     protected String name;
     protected long accountNumber;
     protected float approvedOverdraw = 0;
-    protected Branch branch;
 
-    public Account(String name, Branch branch) {
+
+    public Account(String name) {
         this.name = name;
-        this.branch = branch;
     }
 
     public List<Transaction> getTransactions() {
@@ -63,10 +62,6 @@ public abstract class Account {
             str.append(row);
         }
         return str.toString();
-    }
-
-    public void requestOverDraft(float amount, String reason){
-        branch.addRequest(new OverdraftRequest(amount, reason, this));
     }
 
     public void setApprovedOverdraw(float approvedOverdraw) {

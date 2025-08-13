@@ -1,8 +1,8 @@
 package com.booleanuk.extension;
 
 public class SavingsAccount extends Account {
-    public SavingsAccount(String name, Branch branch) {
-        super(name, branch);
+    public SavingsAccount(String name) {
+        super(name);
     }
 }
 

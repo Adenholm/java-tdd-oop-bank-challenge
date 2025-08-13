@@ -6,7 +6,7 @@
 |                  | float ApprovedOverdraw          | deposit(float amount)                         | deposit was successfully done  | true               |
 |                  |                                 | withdraw(float float amount)                  | withdrawal was successful      | true               |
 |                  |                                 | requestOverDraft(float amount, String reason) |                                |                    | 
-|                  |                                 | generateStatements()                          |                                |                    | 
+|                  |                                 | generateStatements()                          |                                | String             | 
 | CurrentAccount   |                                 |                                               |                                |                    | 
 | SavingAccount    |                                 |                                               |                                |                    | 
 | Transaction      | float delta                     |                                               |                                |                    | 

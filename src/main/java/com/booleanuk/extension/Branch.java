@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Branch {
     private List<OverdraftRequest> requests = new ArrayList<>();
+    private List<Account> accounts = new ArrayList<>();
 
     public void approveRequest(OverdraftRequest request){
         request.approve();
@@ -16,11 +17,15 @@ public class Branch {
         requests.remove(request);
     }
 
-    public void addRequest(OverdraftRequest request){
-        requests.add(request);
-    }
-
     public List<OverdraftRequest> getRequests() {
         return requests;
+    }
+
+    public void requestOverDraft(float amount, String reason, Account account){
+        requests.add(new OverdraftRequest(amount, reason, account));
+    }
+
+    public void addAccount(Account account){
+        accounts.add(account);
     }
 }
