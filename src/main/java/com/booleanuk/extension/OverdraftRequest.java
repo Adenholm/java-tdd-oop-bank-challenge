@@ -3,9 +3,9 @@ package com.booleanuk.extension;
 public class OverdraftRequest {
     private float amount;
     private String reason;
-    private Account account;
+    private CurrentAccount account;
 
-    public OverdraftRequest(float amount, String reason, Account account) {
+    public OverdraftRequest(float amount, String reason, CurrentAccount account) {
         this.amount = amount;
         this.reason = reason;
         this.account = account;

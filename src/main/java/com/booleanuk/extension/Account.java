@@ -8,7 +8,6 @@ public abstract class Account {
     protected List<Transaction> transactions = new ArrayList<>();
     protected String name;
     protected long accountNumber;
-    protected float approvedOverdraw = 0;
 
 
     public Account(String name) {
@@ -36,7 +35,7 @@ public abstract class Account {
     }
 
     public boolean withdraw(float amount){
-        if (amount > 0 && getBalance() + approvedOverdraw >= amount){
+        if (amount > 0 && getBalance() >= amount){
             transactions.add(new Transaction(-amount));
             return true;
         }
@@ -62,9 +61,5 @@ public abstract class Account {
             str.append(row);
         }
         return str.toString();
-    }
-
-    public void setApprovedOverdraw(float approvedOverdraw) {
-        this.approvedOverdraw = approvedOverdraw;
     }
 }

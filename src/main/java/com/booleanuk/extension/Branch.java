@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Branch {
-    private List<OverdraftRequest> requests = new ArrayList<>();
-    private List<Account> accounts = new ArrayList<>();
+    private final List<OverdraftRequest> requests = new ArrayList<>();
+    private final List<Account> accounts = new ArrayList<>();
 
     public void approveRequest(OverdraftRequest request){
         request.approve();
@@ -21,7 +21,7 @@ public class Branch {
         return requests;
     }
 
-    public void requestOverDraft(float amount, String reason, Account account){
+    public void requestOverDraft(float amount, String reason, CurrentAccount account){
         requests.add(new OverdraftRequest(amount, reason, account));
     }
 
